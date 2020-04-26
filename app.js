@@ -74,7 +74,7 @@ app.use(expressJwt({
 //     // // render the error page
 //     // res.status(err.status || 500);
 //     // res.render('error');
-// });
+// });1
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
