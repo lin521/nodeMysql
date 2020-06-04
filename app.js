@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 app.use(expressJwt({
     secret: secretKey
 }).unless({
-    path: ['/token/vueMiniUserInfo']
+    path: ['/token/vueMiniUserInfo', '/good/getDecorative']
 }));
 
 // app.use('*', function(req, res, next) {

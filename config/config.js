@@ -1,13 +1,13 @@
 var connConfig = {}
 if (process.env.NODE_ENV === 'development') {
     connConfig = {
-        host: '127.0.0.1',
-        user: 'root',
-        password: '',
-        database: 'XXX'
+        host: '211.149.198.138',
+        user: 'tpshop',
+        password: 'e7P4u2v2',
+        database: 'tpshop'
     }
 }
-const static_url = 'http://localhost:3000/'
+const static_url = 'http://tpshoptest.diwutu.com'
 const secretKey = 'node_serve'
 module.exports = {
     connConfig: connConfig,

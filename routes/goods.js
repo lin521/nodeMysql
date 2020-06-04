@@ -264,4 +264,26 @@ router.post('/getDecorative', async(req, res) => {
     res.json({...data })
 })
 
+router.post('/goodEdit', async(req, res) => {
+    let params = req.body;
+    let map = {
+        'goods_id': params.id
+    }
+    const sqlstr = sql
+        .table('tp_goods')
+        .where(map)
+        .select();
+    const result = await mysqlOperation.operation(sqlstr);
+    let data = result[0]
+    data.original_img = static_url + data.original_img
+    let datas = {
+        code: 201,
+        message: 'SUCCESSS',
+        data: {
+            data: data
+        }
+    }
+    res.json({...datas })
+})
+
 module.exports = router;
