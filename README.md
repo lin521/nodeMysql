@@ -1,2 +1,0 @@
-# nodeMysql
-node mysql 
